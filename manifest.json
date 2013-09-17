@@ -6,15 +6,11 @@
     "browser_action": {
         "default_icon": "img/icon_19.png"
     },
-    "background": {
-        "scripts": [
-            "background.js"
-        ]
-    },
-    "permissions": [
-        "webRequest",
-        "http://*/*",
-        "https://*/*",
-        "tabs"
+    "content_scripts": [
+        {
+            "matches": ["http://orteil.dashnet.org/cookieclicker/"],
+            "js": ["jquery.min.js","script.js"],
+            "run_at": "document_start"
+        }
     ]
 }
