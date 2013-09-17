@@ -1,10 +1,14 @@
+function click_golden_cookie() {
+    var golden = $('#goldenCookie');
+
+    if (golden.css('display') == 'block') {
+        golden.click();
+    }
+}
+
 function click_cookie() {
     setTimeout(function() {
-        var golden = $('#goldenCookie');
-
-        if (golden.css('display') == 'block') {
-            golden.click();
-        }
+        click_golden_cookie();
 
         $('#bigCookie').click();
         click_cookie();
