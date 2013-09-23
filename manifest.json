@@ -14,7 +14,10 @@
     },
     "content_scripts": [
         {
-            "matches": ["http://orteil.dashnet.org/cookieclicker/"],
+            "matches": [
+                "http://orteil.dashnet.org/cookieclicker/",
+                "http://cafe-capy.net/cookieclicker/"
+            ],
             "js": ["jquery.min.js","script.js"],
             "run_at": "document_start"
         }
